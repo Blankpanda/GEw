@@ -1,5 +1,5 @@
 # GE_wrapper
-GE_wrapper is a Old School Runesacpe Grand Exchangre API wrapper.
+GE_wrapper is a Old School Runesacpe Grand Exchange API wrapper.
 
 ---
 Currently, the grand exchange API is not functioning properly but using JSON collected earlier, the wrapper is working.
