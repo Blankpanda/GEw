@@ -116,6 +116,7 @@ class Exchange(object):
         item_list = item_info.items
 
         try:
+
             for i in range(0,len(item_list)):
                 if item_list[i]['id']  == item_id:
                     return item_info['name']
@@ -127,7 +128,6 @@ class Exchange(object):
 
 
 class IDOutOfRange(Exception):
-
     def __init__(self, value):
         self.value = "value was out of range of valid IDs"
     def __str__(self):
