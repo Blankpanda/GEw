@@ -16,7 +16,7 @@ add this to the top of your program:
 (be sure to add items.json to a resource folder)
 create an Exchange object:
    
-    item = exchange.Exchange(<ITEM_ID>)
+    item = exchange.GE(<ITEM_ID>)
 (item IDS can be found in res/items.json)
 
 the following generic properties will be retrieved from the api:
@@ -44,7 +44,7 @@ properties about marketing trends:
   * **six months ago**
     1. SixMonth_trend
     2. SixMonth_change
-  
+ 
 ---
 Example
 ---
@@ -54,8 +54,13 @@ Example
     print(item.name)  # "Abbysal Whip"
     print(item.SixMonth_trend) # "positive"
     print(item.SixMonth_change) # "+9.0%"
-    
 
+---
+Additionally you can use the ItemList module to match item IDs to names.
+
+     item_id = exchange.ItemList.get_id("Bucket of wax") # 30
+     item_name = exchange.ItemList.get_name(30) # "Bucket of wax"
+  
 ---
 TODO
 ---
