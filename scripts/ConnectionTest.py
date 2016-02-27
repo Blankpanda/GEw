@@ -1,6 +1,8 @@
-import exchange
+""" simply iterates through each item link to check and see if that page is available """
+
 import json
 import time
+
 from urllib.request import urlopen
 
 def main():
@@ -20,7 +22,7 @@ def main():
             urlopen(link + str(item['id']))
             counter = counter + 1
             item_ids.append(item['id'])
-            time.sleep(5)
+            time.sleep(5) # sure I guess...
         except Exception as e:
             print(item['id']+ ": failed.")
 
@@ -30,6 +32,6 @@ def main():
         w.write(item + '\n')
 
     print(counter)
-            
-            
+
+
 main()
