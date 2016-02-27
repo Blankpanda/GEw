@@ -2,16 +2,13 @@ from setuptools import setup, find_packages
 from codecs import open
 from os import path
 
-here = path.abspath(path.dirname(__file__))
 
-with open(path.join(here, 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
 
 setup(
     name='gew',
-    version='0.0.1',
+    version='0.0.10',
     description='Old School RuneScape Grand Exchange wrapper',
-    long_description=long_description,
+    long_description='',
     url='https://github.com/Blankpanda/GE_wrapper',
     author='Caleb Ellis',
     author_email='elliscaleb1998@gmail.com',
@@ -31,6 +28,8 @@ setup(
     keywords='api development',
     packages=find_packages(exclude=['examples', 'scripts']),
     install_requires=[''],
-    data_files=[('gew/res/items.json')],
-
+    package_data={
+        'gew': ['items.json'],
+    },
+    data_files=[],
 )
