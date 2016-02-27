@@ -46,11 +46,6 @@ properties about marketing trends:
     2. SixMonth_change
  
 ---
-Additionally you can use the ItemList module to match item IDs to names.
-     item_id = exchange.ItemList.get_id("Bucket of wax") # 30
-     item_name = exchange.ItemList.get_name(30) # "Bucket of wax"
-  
----
 Example
 ---
     item = Exchange.exchange(4151)
@@ -59,8 +54,13 @@ Example
     print(item.name)  # "Abbysal Whip"
     print(item.SixMonth_trend) # "positive"
     print(item.SixMonth_change) # "+9.0%"
-    
 
+---
+Additionally you can use the ItemList module to match item IDs to names.
+
+     item_id = exchange.ItemList.get_id("Bucket of wax") # 30
+     item_name = exchange.ItemList.get_name(30) # "Bucket of wax"
+  
 ---
 TODO
 ---
