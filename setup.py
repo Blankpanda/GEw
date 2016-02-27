@@ -6,7 +6,7 @@ from os import path
 
 setup(
     name='gew',
-    version='0.0.10',
+    version='0.0.17',
     description='Old School RuneScape Grand Exchange wrapper',
     long_description='',
     url='https://github.com/Blankpanda/GE_wrapper',
@@ -27,9 +27,8 @@ setup(
     ],
     keywords='api development',
     packages=find_packages(exclude=['examples', 'scripts']),
+    include_package_data=True,
     install_requires=[''],
-    package_data={
-        'gew': ['items.json'],
-    },
-    data_files=[],
+    package_data={'gew' : ['items.json']},
+    data_files=['gew/items.json']
 )

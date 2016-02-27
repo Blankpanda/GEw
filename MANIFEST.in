@@ -1,2 +1,3 @@
 include LICENSE
-recursive-include data *
+include gew/items.json
+recursive-include gew/*.json
