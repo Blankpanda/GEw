@@ -28,13 +28,12 @@ class Item(object):
         self.price = self.item_json['current']['price']
 
         # market trends
-
         # item_json is segmented based off of the different outputs for trends
         current_json = self.item_json['current']
         today_json = self.item_json['today']
         three_month_json = self.item_json['day90']
         six_month_json = self.item_json['day180']
-
+        
         # current trends
         self.current_trend = current_json['trend']
         self.current_price = current_json['price'] # remove ???
@@ -44,8 +43,8 @@ class Item(object):
         self.today_price = today_json['price'] # this is going to return how much the price has changed today
 
         # trends three months ago
-        self.ThreeMonths_trend = three_month_json['trend']
-        self.ThreeMonths_change = three_month_json['change']
+        self.ThreeMonth_trend = three_month_json['trend']
+        self.ThreeMonth_change = three_month_json['change']
 
         # trends six months ago
         self.SixMonth_trend = six_month_json['trend']
