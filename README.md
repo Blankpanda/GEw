@@ -1,23 +1,20 @@
-# GE_wrapper
-GE_wrapper is a Old School Runesacpe Grand Exchange API wrapper.
+# GEw
+GEw is a Old School Runesacpe Grand Exchange API wrapper.
 
 ---
 How to Use
 ---
 
-clone the repository:
+install the pip package:
     
-    git clone https://github.com/Blankpanda/GE_wrapper.git
+    pip install gew
+
 
 add this to the top of your program:
+
+     import gew
     
-    import exchange
-    
-(be sure to add items.json to a resource folder)
-create an Exchange object:
-   
-    item = exchange.GE(<ITEM_ID>)
-(item IDS can be found in res/items.json)
+---
 
 the following generic properties will be retrieved from the api:
   1. icon
@@ -48,7 +45,7 @@ properties about marketing trends:
 ---
 Example
 ---
-    item = Exchange.exchange(4151)
+    item = gew.exchange.Item(4151)
     
     print(item.price) # 2.4m
     print(item.name)  # "Abbysal Whip"
@@ -58,13 +55,13 @@ Example
 ---
 Additionally you can use the ItemList module to match item IDs to names.
 
-     item_id = exchange.ItemList.get_id("Bucket of wax") # 30
-     item_name = exchange.ItemList.get_name(30) # "Bucket of wax"
+     item_id = gew.ItemList.get_id("Bucket of wax") # 30
+     item_name = gew.ItemList.get_name(30) # "Bucket of wax"
   
 ---
 TODO
 ---
-  * fix Items.py so that its able to retrieve IDS from inputing a name from names.json to make it easier to match item ids to names
+ 
   
 
   
