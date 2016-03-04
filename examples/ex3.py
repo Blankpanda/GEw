@@ -9,7 +9,7 @@ def main():
     item.get_new_item(new_id)
 
     print(item.name)
-    
+
 
 
 if __name__ == "__main__":
